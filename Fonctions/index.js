@@ -11,7 +11,7 @@ bot.on("ready", async() => {
 
 
 bot.on("guildMemberAdd", member => {
-    bot.channels.cache.get('807173186373419038').send('Bienvenue $USER !'); //on envoie le message de bienvenue du bot dans un salon spécifique via son ID
+    bot.channels.cache.get('807173186373419038').send('Bienvenue !'); //on envoie le message de bienvenue du bot dans un salon spécifique via son ID
 });
 
 bot.login(token.token); //lance le bot
