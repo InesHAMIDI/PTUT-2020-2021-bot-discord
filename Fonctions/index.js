@@ -10,8 +10,17 @@ bot.on("ready", async() => {
 }); //Quand le bot est ready, on lance la fonction async qui affiche le statut du bot "en train de jouer..." et en online
 
 
-bot.on("guildMemberAdd", member => {
-    bot.channels.cache.get('807173186373419038').send('Bienvenue $USER !'); //on envoie le message de bienvenue du bot dans un salon spécifique via son ID
+bot.on('guildMemberAdd', member => {
+    const channel = member.guild.channels.cache.find(ch => ch.name === 'ines');
+    // On veut envoyer un message de bienvenue dans un salon spécial par rapport à son nom pour qu'il s'adapte à tous les serveurs, si le channel n'existe pas, on arrête
+    if (!channel) return;
+    channel.send(`Bienvenue ${member}`);
 });
+
+bot.on('message', msg => {
+    if (msg.content === 'ping') {
+        msg.reply('Pong!');
+    }
+}); //une fonction simple pour vérifier si le bot fonctionne
 
 bot.login(token.token); //lance le bot
