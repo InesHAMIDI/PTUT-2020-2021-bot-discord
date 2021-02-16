@@ -9,14 +9,18 @@ bot.on("ready", async() => {
     bot.user.setActivity("*help", { type: "LISTENING" }); //sans type : "joue à", ici : "écoute ..."
 }); //Quand le bot est ready, on lance la fonction async qui affiche le statut du bot "en train de jouer..." et en online
 
-
 bot.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.name === 'ines');
+    const channel = member.guild.channels.cache.find(ch => ch.name === 'général');
     // On veut envoyer un message de bienvenue dans un salon spécial par rapport à son nom pour qu'il s'adapte à tous les serveurs, si le channel n'existe pas, on arrête
-    if (!channel) {
-        console.log("error, channel de bienvenue not found");
-    }
+    if (!channel) return;
     channel.send(`Bienvenue ${member}`);
+}); //fonction donnée comme exemple dans discord.js API
+
+bot.on('guildMemberRemove', member => {
+    const channel = member.guild.channels.cache.find(ch => ch.name === 'général');
+    // On veut envoyer un message d'au revoir dans un salon spécial par rapport à son nom pour qu'il s'adapte à tous les serveurs, si le channel n'existe pas, on arrête
+    if (!channel) return;
+    channel.send(`Bye ${member}`);
 });
 
 bot.on('message', msg => {
@@ -24,5 +28,9 @@ bot.on('message', msg => {
         msg.reply('Pong!');
     }
 }); //une fonction simple pour vérifier si le bot fonctionne
+
+//Fonctions utilisées :
+
+
 
 bot.login(token.token); //lance le bot

@@ -1,5 +1,5 @@
 echo off
 cls
-eco Starting bot
-node index.js
+echo Starting bot
+node ./Fonctions/index.js
 pause
