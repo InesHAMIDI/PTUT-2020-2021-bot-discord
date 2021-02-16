@@ -13,7 +13,9 @@ bot.on("ready", async() => {
 bot.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.name === 'ines');
     // On veut envoyer un message de bienvenue dans un salon spécial par rapport à son nom pour qu'il s'adapte à tous les serveurs, si le channel n'existe pas, on arrête
-    if (!channel) return;
+    if (!channel) {
+        console.log("error, channel de bienvenue not found");
+    }
     channel.send(`Bienvenue ${member}`);
 });
 
