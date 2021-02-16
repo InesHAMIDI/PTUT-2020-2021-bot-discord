@@ -14,6 +14,7 @@ bot.on('guildMemberAdd', member => {
     // On veut envoyer un message de bienvenue dans un salon spécial par rapport à son nom pour qu'il s'adapte à tous les serveurs, si le channel n'existe pas, on arrête
     if (!channel) return;
     channel.send(`Bienvenue ${member}`);
+    member.roles.remove('membre');
 }); //fonction donnée comme exemple dans discord.js API
 
 bot.on('guildMemberRemove', member => {
@@ -21,6 +22,7 @@ bot.on('guildMemberRemove', member => {
     // On veut envoyer un message d'au revoir dans un salon spécial par rapport à son nom pour qu'il s'adapte à tous les serveurs, si le channel n'existe pas, on arrête
     if (!channel) return;
     channel.send(`Bye ${member}`);
+    member.roles.add('membre');
 });
 
 bot.on('message', msg => {
