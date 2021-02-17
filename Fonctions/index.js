@@ -11,10 +11,7 @@ bot.on("ready", async() => {
 
 bot.on('guildMemberAdd', member => {
     if (member.user.bot) return; //on ne considère pas les autres bots comme des utilisateurs
-    const channel = member.guild.channels.fetch("807173186373419038");
-    console.log(channel);
-    if (!channel) return;
-    channel.send(`Bienvenue ${member}`);
+    bot.channels.cache.get("807173186373419038").send(`Bienvenue ${member}`);
 }); //fonction donnée comme exemple dans discord.js API
 
 bot.on('message', msg => {
