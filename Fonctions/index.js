@@ -12,10 +12,12 @@ bot.on("ready", async() => {
 bot.on('guildMemberAdd', member => {
     if (member.user.bot) return; //on ne considère pas les autres bots comme des utilisateurs
     bot.channels.cache.get("807173186373419038").send(`Bienvenue ${member}`);
+    console.log(channel);
+    if (!channel) return;
 }); //fonction donnée comme exemple dans discord.js API
 
 bot.on('message', msg => {
-    if (msg.member.user.bot || message.channel.type === 'dm') return; //on n'accepte pas de communiquer entre bots, ni en message privé
+    if (msg.member.user.bot || msg.channel.type === 'dm') return; //on n'accepte pas de communiquer entre bots, ni en message privé
     if (msg.content === 'ping') {
         msg.reply('Pong!');
     }
