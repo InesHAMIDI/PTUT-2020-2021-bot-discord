@@ -1,5 +1,19 @@
 [
-    "1.png",
-    "2.png",
-    "3.png"
+    "Karma": {
+        "ID": "1",
+        "Nom": "karma",
+        "chemin": "./images./01.png"
+    },
+
+    "Nagisa": {
+        "ID": "2",
+        "Nom": "nagisa",
+        "chemin": "./images./02.png"
+    },
+
+    "Koro": {
+        "ID": "3",
+        "Nom": "koro sensei",
+        "chemin": "./images./03.png"
+    }
 ]
