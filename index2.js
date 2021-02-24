@@ -6,6 +6,7 @@ const fs = require("fs");
 const bobot = require("./bobot.json");
 let request = require ('request');
 imagesbobot = require ("./images.json");
+reponsesbobot = require ("./reponses.json")
 
 bot.on("ready", async () =>{
     console.log('Le bot est allumé');
@@ -21,32 +22,18 @@ function image() {
         imagesbobot.forEach(file => {
             Compteur ++;
         })
-        Random = Math.floor(Math.random() * Compteur);
-        message.channel.send({ files: [`./images/${imagesbobot[Random]}`]});
-        reponse(Random);
+        Chiffre = Math.floor(Math.random() * Compteur);
+        message.channel.send({ files: [`./images/${imagesbobot[Chiffre]}`]});
+        reponse(Chiffre);
     }
 }
 
 //fonction qui valide si la réponse est juste
 function reponse(numero) {
-    if(numero == 0) {
-        if(message.content === 'karma') {
-            if(message.member.user.bot) return ;
-            message.reply('Bravo !');
-        }
-    }
-    else if(numero == 1) {
-        if(message.content === 'nagisa') {
-            if(message.member.user.bot) return ;
-            message.reply('Bravo !');
-        }
-    }
-    else if(numero == 2) {
-        if(message.content === 'koro') {
-            if(message.member.user.bot) return ;
-            message.reply('Bravo !');
-        }
+    if(message.content == `${reponsesbobot[numero]}`){
+        message.reply('Bravo, tu as trouvé !');
     }
 }
+
 
 bot.login(token.token);
