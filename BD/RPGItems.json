@@ -1,0 +1,19 @@
+{
+    "LifePotion": {
+        "ItemID": "01",
+        "Effect": "HP+5",
+        "Description": "A nice little potion bottle, filled with a green and smelly liquid. It's been made by a grand alchemist and it's the must have for every adventurer !"
+    },
+
+    "ManaPotion": {
+        "ItemID": "02",
+        "Effect": "MP+5",
+        "Description": "A little bottle filled with a luminescent fluid full of energy."
+    },
+
+    "Cord": {
+        "ItemID": "03",
+        "Effect": "Flee",
+        "Description": "A usefull cord to help you escape from dangerous dungeons !"
+    }
+}

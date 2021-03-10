@@ -1,0 +1,12 @@
+{
+    "herbs": {
+        "LootID": "01",
+        "Craft": "HealthPotion",
+        "Description": "Some medicinal plants you can use to make health potions."
+    },
+    "FairyDust": {
+        "LootID": "02",
+        "Craft": "ManaPotion",
+        "Description": "Some sparkly dust full of mana, it is used to make mana potions"
+    }
+}

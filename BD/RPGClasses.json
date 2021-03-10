@@ -1,0 +1,95 @@
+{
+    "Tank": {
+        "ClassID": "01",
+        "Skills": {
+            "ShieldHit": {
+                "SkillID": "011",
+                "Effect": "Stun",
+                "Damages": "-10",
+                "Description": "You hit your ennemy with your shield."
+            },
+            "SwordHit": {
+                "SkillID": "021",
+                "Effect": "Bleed",
+                "Damages": "-15",
+                "Description": "You hit your ennemy with your sword."
+            }
+        }
+    },
+    "Priest": {
+        "ClassID": "02",
+        "Skills": {
+            "DivineAnger": {
+                "SkillID": "012",
+                "Effect": "Bleed",
+                "Damages": "-15",
+                "Description": "You unleash the gods' anger on your ennemies."
+            },
+            "Heal": {
+                "SkillID": "022",
+                "Effect": "Heal",
+                "Damages": "+10",
+                "Description": "You heal your party with a very sweet wind full of love."
+            }
+        }
+    },
+
+    "Bard": {
+        "ClassID": "03",
+        "Skills": {
+            "Balade": {
+                "SkillID": "013",
+                "Effect": "Heal",
+                "Damages": "+5",
+                "Description": "You sing a nice song that makes you feel better."
+            },
+            "Arrows": {
+                "SkillID": "023",
+                "Effect": "Bleed",
+                "Damages": "-10",
+                "Description": "You shot arrows to your ennemies."
+            }
+        }
+    },
+
+    "Berserker": {
+        "ClassID": "04",
+        "Skills": {
+            "AxeHit": {
+                "SkillID": "014",
+                "Effect": "Stun",
+                "Damages": "-15",
+                "Description": "You hit you ennemy with your heavy axe."
+            },
+            "Fury": {
+                "SkillID": "024",
+                "Effect": "Heal",
+                "Damages": "+5",
+                "Description": "You unleash your fury, making you able to ignore the hurts you have as if they were cured."
+
+            }
+        }
+    },
+
+    "Thief": {
+        "ClassID": "05",
+        "Skills": {
+            "Stealth": {
+                "SkillID": "015",
+                "Effect": "Stun",
+                "Damages": "-10",
+                "Description": "You become really stealthy and hit your ennemy on the back of the neck."
+            },
+            "KnifeHit": {
+                "SkillID": "025",
+                "Effect": "Bleed",
+                "Damages": "-15",
+                "Description": "You hit your ennemy with your trusty knife."
+            }
+        }
+    }
+
+
+
+
+}
