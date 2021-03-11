@@ -1,0 +1,18 @@
+{
+  "name": "brocobot",
+  "version": "1.0.0",
+  "description": "Bot de Brocolarbre",
+  "main": "index.js",
+  "scripts": {
+    "test": "!test"
+  },
+  "keywords": [
+    "bot",
+    "brocolarbre"
+  ],
+  "author": "Brocolarbre",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
