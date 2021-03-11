@@ -1,3 +1,0 @@
-{
-token: “ODA3MTcxNTEzMDc3NzI3MjQz.YB0HDQ._ogQuAnZ7Sai6LRGVhjVjg73H1s”
-}
