@@ -87,6 +87,24 @@
                 "Description": "You hit your ennemy with your trusty knife."
             }
         }
+    },
+
+    "Druid": {
+        "ClassID": "06",
+        "Skills": {
+            "HealthConcoction": {
+                "SkillID": "016",
+                "Effect": "Heal",
+                "Damages": "+10",
+                "Description": "You brew a nice health potion and spell it on your wounds."
+            },
+            "NaturesAnger": {
+                "SkillID": "026",
+                "Effect": "Bleed",
+                "Damages": "-10",
+                "Description": "You summon the forces of nature to defeat your ennemy."
+            }
+        }
     }
 
 
