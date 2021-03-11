@@ -8,31 +8,26 @@ let request = require ('request');
 imagesbobot = require('./images.json');
 reponsesbobot = require ("./reponses.json")
 
-const quiz = require('./films.json');
-const item = quiz[Math.floor(Math.random() * quiz/length)];
+const quiz = require('./test.json');
+const item = quiz[Math.floor(Math.random() * quiz.length)];
+
+//boolen qui teste si la reponse est dans le tableau
 const filter = response => {
-    return item.answers.some(answers => answers.toLowerCase() === response.content.toLowerCase());
+	return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
 };
 
-bot.on("ready", async () =>{
-    console.log('Le bot est allumé');
-    bot.user.setStatus("dnd");
-    bot.user.setActivity('rien');
-})
-
-//fonction qui envoie une message aléatoirement parmi celles de la base de données
-function image() {
-    if (message.content == "!image") {
-        if (message.member.user.bot) return;
-        var Compteur = 0;
-        imagesbobot.forEach(file => {
-            Compteur ++;
-        })
-        Chiffre = Math.floor(Math.random() * Compteur);
-        message.channel.send({ files: [`./images/${imagesbobot[Chiffre]}`]});
-        reponse(Chiffre);
-    }
+if (message.content == "!test") {
+    message.channel.send(item.question).then(() => {
+        message.channel.awaitMessages(filter, { max: 2, time: 30000, errors: ['time'] })
+            .then(collected => {
+                message.channel.send(`${collected.first().author} got the correct answer!`);
+            })
+            .catch(collected => {
+                message.channel.send('Looks like nobody got the answer this time.');
+            });
+    });
 }
+
 
 
 
