@@ -1,39 +1,15 @@
-<<<<<<< HEAD
 {
   "name": "brocobot",
   "version": "1.0.0",
-  "description": "Bot de Brocolarbre",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "!test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "bot",
-    "brocolarbre"
-  ],
-  "author": "Brocolarbre",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "node": "^15.10.0"
   }
 }
-=======
-{
-  "name": "brocobot",
-  "version": "1.0.0",
-  "description": "Bot de Brocolarbre",
-  "main": "index.js",
-  "scripts": {
-    "test": "!test"
-  },
-  "keywords": [
-    "bot",
-    "brocolarbre"
-  ],
-  "author": "Brocolarbre",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js": "^12.5.1"
-  }
-}
->>>>>>> 737e16fe29159e4cb19b4a0cfae1e725351bcd10
