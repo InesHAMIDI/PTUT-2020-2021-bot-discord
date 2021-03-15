@@ -1,4 +1,4 @@
-# PTUT-2019-2020
+﻿# PTUT-2019-2020
 
 ## BrocoBot
 
@@ -21,30 +21,30 @@
 
 ### Commandes
 
-**Nom :** !info
-**Description :** affiche les informations du membre mentionné, si personne n'est mentionné, les informations du membre émetteur de la commande sont affichées.
-**Paramètres :** [member] -> mention de l'utilisateur à afficher
+**Nom :** !info <br />
+**Description :** affiche les informations du membre mentionné, si personne n'est mentionné, les informations du membre émetteur de la commande sont affichées. <br />
+**Paramètres :** [member] -> mention de l'utilisateur à afficher <br />
 
-**Nom :** !server-info
-**Description :** affiche les informations sur le serveur.
-**Paramètres :** aucun
+**Nom :** !server-info <br />
+**Description :** affiche les informations sur le serveur. <br />
+**Paramètres :** aucun <br />
 
-**Nom :** !kick
-**Description :** exclut le membre sélectionné.
-**Paramètres :** [member] -> mention de l'utilisateur à exclure
+**Nom :** !kick <br />
+**Description :** exclut le membre sélectionné. <br />
+**Paramètres :** [member] -> mention de l'utilisateur à exclure <br />
 
-**Nom :** !ban
-**Description :** bannit l'utilisateur mentionné.
-**Paramètres :** [member] -> mention de l'utilisateur à bannir
+**Nom :** !ban <br />
+**Description :** bannit l'utilisateur mentionné. <br />
+**Paramètres :** [member] -> mention de l'utilisateur à bannir <br />
 
-**Nom :** !delmes
-**Description :** supprime une quantité choisie de messages en partant des plus récents.
-**Paramètres :** [amount] -> quantité de messages à supprimer
+**Nom :** !delmes <br />
+**Description :** supprime une quantité choisie de messages en partant des plus récents. <br />
+**Paramètres :** [amount] -> quantité de messages à supprimer <br />
 
-**Nom :** !setMessageCooldown
-**Description :** définit le temps d'attente entre chaque envoi de message (propre à chaque membre).
-**Paramètres :** [cooldown] -> temps d'attente en millisecondes
+**Nom :** !setMessageCooldown <br />
+**Description :** définit le temps d'attente entre chaque envoi de message (propre à chaque membre). <br />
+**Paramètres :** [cooldown] -> temps d'attente en millisecondes <br />
 
-**Nom :** !setCommandCooldown
-**Description :** définit le temps d'attente entre chaque envoi de commande (propre à chaque membre).
-**Paramètres :** [cooldown] -> temps d'attente en millisecondes
+**Nom :** !setCommandCooldown <br />
+**Description :** définit le temps d'attente entre chaque envoi de commande (propre à chaque membre). <br />
+**Paramètres :** [cooldown] -> temps d'attente en millisecondes <br />
