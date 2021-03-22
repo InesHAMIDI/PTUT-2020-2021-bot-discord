@@ -44,7 +44,7 @@ module.exports =
 			{
 				try
 				{
-					command.execute(message, args);
+					command.execute(message, args, discord);
 				}
 				catch (error)
 				{

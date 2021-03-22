@@ -21,9 +21,9 @@
 
 ### Commandes
 
-**Nom :** !info <br />
+**Nom :** !user-info <br />
 **Description :** affiche les informations du membre mentionné, si personne n'est mentionné, les informations du membre émetteur de la commande sont affichées. <br />
-**Paramètres :** [member] -> mention de l'utilisateur à afficher <br />
+**Paramètres :** [member] -> mention du membre à afficher <br />
 
 **Nom :** !server-info <br />
 **Description :** affiche les informations sur le serveur. <br />
@@ -31,11 +31,11 @@
 
 **Nom :** !kick <br />
 **Description :** exclut le membre sélectionné. <br />
-**Paramètres :** [member] -> mention de l'utilisateur à exclure <br />
+**Paramètres :** [member] -> mention du membre à exclure <br />
 
 **Nom :** !ban <br />
-**Description :** bannit l'utilisateur mentionné. <br />
-**Paramètres :** [member] -> mention de l'utilisateur à bannir <br />
+**Description :** bannit le membre mentionné. <br />
+**Paramètres :** [member] -> mention du membre à bannir <br />
 
 **Nom :** !delmes <br />
 **Description :** supprime une quantité choisie de messages en partant des plus récents. <br />
