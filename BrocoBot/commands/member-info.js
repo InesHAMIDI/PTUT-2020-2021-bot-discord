@@ -25,12 +25,21 @@ module.exports =
 		default: month = "Erreur"; break;
 		}
 
+		let status = "";
+		if(user.presence.status === 'online')
+			status = "En ligne";
+		else if(user.presence.status === 'idle')
+			status = "Absent";
+		else if(user.presence.status === 'dnd')
+			status = "Ne pas déranger";			
+		else
+			status = "Hors ligne";
+
 		const exampleEmbed = new discord.MessageEmbed()
 		.setColor('#0099ff')
 		.setTitle(`${message.author.username}`)
 		.setThumbnail(user.avatarURL())
-		.addField('Statut :', `${user.presence.status}`, true)
-		.addField('Profil :', 'Some value here', true)
+		.addField('Statut :', `${status}`, true)
 		.setFooter(`Membre depuis le ${message.member.joinedAt.getDate()} ${month} ${message.member.joinedAt.getFullYear()}`)
 	
 	
