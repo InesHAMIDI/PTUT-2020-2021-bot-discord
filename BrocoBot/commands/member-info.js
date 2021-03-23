@@ -35,7 +35,7 @@ module.exports =
 		else
 			status = "Hors ligne";
 
-		const exampleEmbed = new discord.MessageEmbed()
+		const embed = new discord.MessageEmbed()
 		.setColor('#0099ff')
 		.setTitle(`${message.author.username}`)
 		.setThumbnail(user.avatarURL())
@@ -43,6 +43,6 @@ module.exports =
 		.setFooter(`Membre depuis le ${message.member.joinedAt.getDate()} ${month} ${message.member.joinedAt.getFullYear()}`)
 	
 	
-		message.channel.send(exampleEmbed);
+		message.channel.send(embed);
 	}
 };
