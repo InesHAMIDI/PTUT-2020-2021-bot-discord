@@ -5,46 +5,43 @@ const token = require("./token.json");
 const fs = require("fs");
 const bobot = require("./bobot.json");
 let request = require ('request');
-imagesbobot = require ("./images.json");
+imagesbobot = require ("./questions.json");
 
 bot.on("ready", async () =>{
     console.log('Le bot est allumé');
     bot.user.setStatus("dnd");
-    bot.user.setActivity('rien parce qu on travaille hein');
+    bot.user.setActivity('se prendre la tête');
 })
 
-function EnregistrerImage() {
-    fs.writeFile("./images.json", JSON.stringify(imagesbobot, null, 4), (err) => {
-        if (err) message.channel.send("Il y a eu une erreur");
-    });
-    
-}
+const personnages = ["karma", "nagisa", "koro-sensei"];
+const karma = ["karma"];
+const nagisa = ["nagisa"];
+const koro = ["koro-sensei", "koro"];
 
-bot.on ('message', async message =>{
-    if (message.channel.id == bobot['channel-images']){
+//fonction qui envoie une message aléatoirement parmi la base de données
+function quiz() {
+    if (message.content == "!image") {
         if (message.member.user.bot) return;
-        if (message.attachments){
-            message.attachments.forEach(a => {
-                download(a.url, message);
-            });
-        }
+        var Compteur = 0;
+        imagesbobot.forEach(file => {
+            Compteur ++;
+        })
+        Chiffre = Math.floor(Math.random() * Compteur);
+        message.channel.send({ files: [`./images/${imagesbobot[Chiffre]}`]});
+        test(Chiffre);
     }
-})
-
-//on créé une fonction pour enregistrer les images 
-function download(url, message) {
-    var Compteur = 1; //on initialise un compteur
-    fs.readdirSync("./images").forEach(file => {
-        Compteur++;
-        //pour chaque image, on rajoute 1 au compteur
-    })
-    var ext = request.get(url).path.split(".").pop()
-    request.get(url)
-        .on('error', console.error) //on répare les erreurs
-        .pipe(fs.createWriteStream(`./images/${Compteur}.${ext}`)); //on enregistre le fichier dans le dossier images
-    imagesbobot.push(`${Compteur}.${ext}`)
-    EnregistrerImage();
-    message.channel.send("L'image a bien été ajoutée !").then(message => delete({timeout: 20000}).catch(err => console.log(err)));
 }
+
+//fonction qui vérifie si la réponse est la bonne
+function test(n) {
+    var reponse = personnages[n];
+    if (message.content == reponse) {
+        message.reply('Bonne réponse !');
+    }
+    else {
+        message.reply('Raté')
+    }
+}
+
 
 bot.login(token.token);
