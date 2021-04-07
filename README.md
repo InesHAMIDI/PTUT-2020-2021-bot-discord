@@ -21,7 +21,7 @@
 
 ### Commandes
 
-**Nom :** !user-info <br />
+**Nom :** !member-info <br />
 **Description :** affiche les informations du membre mentionné, si personne n'est mentionné, les informations du membre émetteur de la commande sont affichées. <br />
 **Paramètres :** [member] -> mention du membre à afficher <br />
 
