@@ -11,7 +11,10 @@ module.exports =
 
 		if(!message.content.startsWith(prefix))
 		{
-			const messageCooldown = 3000;
+			let ready = require(`${__dirname}/ready.js`);
+			let messageCooldown = parseInt(ready.messageCooldown);
+			let commandCooldown = parseInt(ready.commandCooldown);
+
 			const messageCooldownExpiration = message.author.lastMessageTime + messageCooldown;
 
 			if (now > messageCooldownExpiration || Number.isNaN(messageCooldownExpiration))
