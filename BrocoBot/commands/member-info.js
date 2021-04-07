@@ -37,7 +37,7 @@ module.exports =
 
 		const embed = new discord.MessageEmbed()
 		.setColor('#0099ff')
-		.setTitle(`${message.author.username}`)
+		.setTitle(`${user.username}`)
 		.setThumbnail(user.avatarURL())
 		.addField('Statut :', `${status}`, true)
 		.setFooter(`Membre depuis le ${message.member.joinedAt.getDate()} ${month} ${message.member.joinedAt.getFullYear()}`)
