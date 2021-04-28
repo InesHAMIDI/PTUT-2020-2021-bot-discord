@@ -1,8 +1,9 @@
-const Discord = require('discord.js'); //typique #include<>
-const bot = new Discord.Client(); //prérequis pour  créer le bot
+const Discord = require('discord.js'); // #include<>
+const bot = require('../Configs/config.json');
 
 bot.on('message', msg => {
     if (msg.author.bot) return
+    
 })
 
 

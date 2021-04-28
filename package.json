@@ -1,5 +1,5 @@
 {
-  "name": "ptut-2019-2020",
+  "name": "ptut-2020-2021",
   "version": "1.0.0",
   "description": "The discord bot made for School in 2020-2021",
   "main": "index.js",
@@ -24,5 +24,6 @@
   "dependencies": {
     "discord.js": "^12.5.3",
     "sequelize": "^6.6.2"
-  }
+  },
+  "devDependencies": {}
 }

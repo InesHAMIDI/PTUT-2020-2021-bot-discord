@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a426bf19-2c2e-4a35-98e2-bbadf7c0e95c" name="Default Changelist" comment="" />
+    <list default="true" id="a426bf19-2c2e-4a35-98e2-bbadf7c0e95c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PTUT-2019-2020.dir/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PTUT-2019-2020.dir/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PTUT-2019-2020.dir/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PTUT-2019-2020.dir/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PTUT-2019-2020.dir/.idea/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PTUT-2019-2020.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PTUT-2019-2020.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/67245c11-20b7-4de1-b12f-938c9094894f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/67245c11-20b7-4de1-b12f-938c9094894f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configs/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Configs/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fonctions/RPG.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fonctions/RPG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fonctions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fonctions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGBD.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/RPGBD.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/discord.js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/discord.js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +24,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Fonctions/RPG.js" />
+      <option value="$PROJECT_DIR$/Fonctions/index.js" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1q9Z1bfAUF4U47ZmJPkkkx2eEc7" />
   <component name="ProjectViewState">
@@ -31,13 +52,15 @@
       <option name="presentableId" value="Default" />
       <updated>1616493557894</updated>
       <workItem from="1616493569759" duration="1424000" />
+      <workItem from="1619626485143" duration="392000" />
+      <workItem from="1619627088949" duration="417000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

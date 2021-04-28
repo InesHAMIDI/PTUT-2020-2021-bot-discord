@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bff7f37-3621-4c82-8507-8c654229da36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15ab03ec-8b3c-45dc-9456-11030e40e9ef.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39058192-7a01-4401-9c22-a7708bf15839.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58669392-d3f1-4aed-8563-20a482bd2a77.xml" beforeDir="false" />
+    <list default="true" id="7bff7f37-3621-4c82-8507-8c654229da36" name="Default Changelist" comment="I love SQL (no)&#10;I'm currently still working on turning json BD into sqlite">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/67245c11-20b7-4de1-b12f-938c9094894f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/67245c11-20b7-4de1-b12f-938c9094894f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configs/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Configs/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fonctions/RPG.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fonctions/RPG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fonctions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fonctions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RPGBD.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/RPGBD.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/discord.js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/discord.js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +48,35 @@
       <workItem from="1619073421714" duration="286000" />
       <workItem from="1619178024172" duration="7545000" />
       <workItem from="1619530610827" duration="95000" />
-      <workItem from="1619623030125" duration="1448000" />
+      <workItem from="1619623030125" duration="3304000" />
     </task>
+    <task id="LOCAL-00001" summary="I love SQL (no)&#10;I'm currently still working on turning json BD into sqlite">
+      <created>1619624673505</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619624673506</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="I love SQL (no)&#10;I'm currently still working on turning json BD into sqlite" />
+    <option name="LAST_COMMIT_MESSAGE" value="I love SQL (no)&#10;I'm currently still working on turning json BD into sqlite" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

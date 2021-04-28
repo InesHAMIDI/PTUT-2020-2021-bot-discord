@@ -1,13 +1,13 @@
 const Discord = require('discord.js'); //typique #include<>
-const bot = new Discord.Client(); //prérequis pour  créer le bot
+const bot = require('../Configs/config.json');
 const token = require('../Configs/token.json'); //le token est stocké à part pour simplifier
 const prefix = require('../Configs/config.json'); //on stocke le préfix des commandes dans une variable pour rendre les fonctions plus pratiques à implémenter
 
 bot.on("ready", async() => {
     console.log("bot allume"); //un message dans la console pour être sûr que tout marche
-    bot.user.setStatus("online");
-    bot.user.setActivity("*help", { type: "LISTENING" }); //sans type : "joue à", ici : "écoute ..."
-}); //Quand le bot est ready, on lance la fonction async qui affiche le statut du bot "en train de jouer..." et en online
+    await bot.user.setStatus("online");
+    await bot.user.setActivity("*help", {type: "LISTENING"});
+}); //bot ready : make it have some status on discord to make it look cool
 
 bot.on('guildMemberAdd', member => {
     if (member.user.bot) return; //on ne considère pas les autres bots comme des utilisateurs
@@ -23,7 +23,4 @@ bot.on('message', msg => {
     }
 }); //une fonction simple pour vérifier si le bot fonctionne, vient de l'api discord
 
-//Fonctions utilisées :
-
-//
 bot.login(token.token); //lance le bot
