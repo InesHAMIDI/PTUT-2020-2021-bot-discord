@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bff7f37-3621-4c82-8507-8c654229da36" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15ab03ec-8b3c-45dc-9456-11030e40e9ef.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39058192-7a01-4401-9c22-a7708bf15839.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58669392-d3f1-4aed-8563-20a482bd2a77.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/67245c11-20b7-4de1-b12f-938c9094894f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/67245c11-20b7-4de1-b12f-938c9094894f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fonctions/RPG.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fonctions/RPG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGBD.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/RPGBD.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,22 +31,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,7 +44,9 @@
       <workItem from="1616501935174" duration="226000" />
       <workItem from="1618468158825" duration="47000" />
       <workItem from="1619073421714" duration="286000" />
-      <workItem from="1619178024172" duration="5913000" />
+      <workItem from="1619178024172" duration="7545000" />
+      <workItem from="1619530610827" duration="95000" />
+      <workItem from="1619623030125" duration="1448000" />
     </task>
     <servers />
   </component>
