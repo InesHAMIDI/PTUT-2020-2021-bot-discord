@@ -7,6 +7,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ALPHA T",
-  "license": "ISC"
+  "author": "ALPHA T"
 }
