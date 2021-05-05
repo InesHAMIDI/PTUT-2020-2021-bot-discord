@@ -11,7 +11,6 @@ const Create = name => {
     fs.writeFileSync(File, "");
 }
 
-
 const insert = (index, value, file) => {
     let out = fs.readFileSync(file);
     let data = JSON.parse(out.toString());
