@@ -13,7 +13,7 @@ const Create = async name => {
 }
 
 
-const insert = async (data, file) => {
+const Insert = async (data, file) => {
     let database = JSON.stringify(data);
     fs.appendFile(file, database, function(erreur) {
      if (erreur) {
@@ -21,7 +21,16 @@ const insert = async (data, file) => {
     })
 }
 
+const Search = async (searchName, file) => {
+    let nameFile = "../" + file;
+    let jsonData = require(nameFile);
+    var data = jsonData[searchName];
+    console.log(data);
+    return data;
+}
+
 module.exports = {
     Create,
-    insert,
+    Insert,
+    Search,
 }
