@@ -30,14 +30,6 @@ const search = (searchName, file) => {
     let out = fs.readFileSync(file);
     let data = JSON.parse(out.toString());
     return data[searchName];
-
-    /*
-    let jsonData = require(nameFile);
-    var data = jsonData[searchName];
-    console.log(data);
-    data = data + 1;
-    console.log(data);
-    return data;*/
 }
 
 module.exports = {
