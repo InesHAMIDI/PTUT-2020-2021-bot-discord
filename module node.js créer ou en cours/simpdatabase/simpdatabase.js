@@ -1,36 +1,48 @@
-const fs = require("fs").promises;
+const fs = require("fs");
 const path = require("path");
 
-
-const Create = async name => {
+const Create = name => {
     let nameFile = name + ".json";
     const File = path.join(__dirname, nameFile);
     try {
-        await fs.unlink(File);
-    } catch {
+        fs.unlinkSync(File);
+    } catch(e) {
     }
-    await fs.writeFile(File, "");
+    fs.writeFileSync(File, "");
 }
 
 
-const Insert = async (data, file) => {
-    let database = JSON.stringify(data);
-    fs.appendFile(file, database, function(erreur) {
-     if (erreur) {
-         console.log(erreur)}
-    })
+const insert = (index, value, file) => {
+    let out = fs.readFileSync(file);
+    let data = JSON.parse(out.toString());
+    data[index]=value;
+    fs.writeFileSync(file, JSON.stringify(data));
 }
 
-const Search = async (searchName, file) => {
-    let nameFile = "../" + file;
+const Delete = (index, file) => {
+    let out = fs.readFileSync(file);
+    let data = JSON.parse(out.toString());
+    data[index]=undefined;
+    fs.writeFileSync(file, JSON.stringify(data));
+}
+
+const search = (searchName, file) => {
+    let out = fs.readFileSync(file);
+    let data = JSON.parse(out.toString());
+    return data[searchName];
+
+    /*
     let jsonData = require(nameFile);
     var data = jsonData[searchName];
     console.log(data);
-    return data;
+    data = data + 1;
+    console.log(data);
+    return data;*/
 }
 
 module.exports = {
     Create,
-    Insert,
-    Search,
+    insert,
+    Delete,
+    search,
 }
