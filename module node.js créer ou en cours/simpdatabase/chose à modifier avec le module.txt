@@ -1,3 +1,2 @@
 1. commande Uptade
-2. modifier et finir la commande Insert
-3. Fonction pour rechercher l'endroit oû se trouve le fichier.json (c:/dossier1/dossier2/fichier.json)
+2. Fonction pour rechercher l'endroit oû se trouve le fichier.json (c:/dossier1/dossier2/fichier.json)
