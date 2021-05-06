@@ -22,13 +22,13 @@ db.Delete("<Index>" , "<file_name>"); => Va supprimer de votre fichier <file_nam
 										 - <index> existe
 										
 
-db.Update("<Index>" , <value>,"<file_name>"); => Va mettre à jour dans votre fichier <file_name> le <value> de l'<index> selectionner
+db.Update("<Index>" , <value>,"<file_name>"); => Va mettre à jour dans votre fichier <file_name> le <value> de l'<index> selectionner.
 						ps: cette commande marchera si : - le fichier.json comporte des crochet "{}"  
 										 - <index> existe
 										 - qu'il y a une donnée à la fois
 						
 						
-db.Search("<Index>" , "<file_name>"); => Va rechercher et renvoyer dans votre fichier <file_name> le <value> de l'<index> selectionner
+db.Search("<Index>" , "<file_name>"); => Va rechercher et renvoyer dans votre fichier <file_name> le <value> de l'<index> selectionner.
 						ps: cette commande marchera si : - le fichier.json comporte des crochet "{}"  
 										 - <index> existe
 										 - qu'il y a une donnée à la fois
