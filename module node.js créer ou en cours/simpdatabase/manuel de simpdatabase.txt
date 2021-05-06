@@ -7,8 +7,8 @@ metter "const db = require("simpdadabase");" pour comencer à travailler avec le
 
 Commande :
 
-db.Create("<file_name>"); => créer un fichier.json avec comme nom : <file_name>. celui-ci apparaitra sur votre dossier racine et il pourra être déplacer manuellement. En ouvrant
-			   le fichier, il y aura déjà des crochet "{}" afficher.
+db.Create("<file_name>"); => créer un fichier.json avec comme nom : <file_name>. celui-ci apparaitra sur votre dossier racine et il pourra être déplacer manuellement.
+			    En ouvrant le fichier, il y aura déjà des crochet "{}" afficher.
 
 
 db.Insert("<Index>" , <value>,"<file_name>") => Va inserérer dans votre fichier <file_name> un <index> suivie de son <value> comme : "<index>": <value>.
