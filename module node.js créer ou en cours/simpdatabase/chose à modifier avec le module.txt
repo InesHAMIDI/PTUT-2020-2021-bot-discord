@@ -1,2 +1,0 @@
-1. commande Uptade
-2. Fonction pour rechercher l'endroit oû se trouve le fichier.json (c:/dossier1/dossier2/fichier.json)
