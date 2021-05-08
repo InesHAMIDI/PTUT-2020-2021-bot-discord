@@ -23,7 +23,8 @@
   "homepage": "https://github.com/InesHAMIDI/PTUT-2020-2021-bot-discord#readme",
   "dependencies": {
     "discord.js": "^12.5.3",
-    "sequelize": "^6.6.2"
+    "sequelize": "^6.6.2",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {}
 }
