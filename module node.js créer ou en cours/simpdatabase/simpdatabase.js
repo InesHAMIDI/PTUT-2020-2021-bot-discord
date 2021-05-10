@@ -13,53 +13,115 @@ const Create = name => {
     console.log("File created !")
 }
 
-const Insert = (index, value, file) => {
+const Insert = (tab, index, value, file) => {
     let out = fs.readFileSync(file);
     let data = JSON.parse(out.toString());
-    if (data[index] == undefined) {
-        data[index]=value;
-        fs.writeFileSync(file, JSON.stringify(data));
+    if (tab == "") {
+        if (data[index] == undefined) {
+            data[index] = value;
+            fs.writeFileSync(file, JSON.stringify(data));
+        } else {
+            console.log(index + ", Already exists !");
+        }
+    } else if (index == "") {
+        if (data[tab] == undefined) {
+            data[tab] = {};
+            fs.writeFileSync(file, JSON.stringify(data));
+        } else {
+            console.log(tab + ", Already exists !");
+        }    
     } else {
-        console.log(index + ", Already exists !");
-    }    
+        if (data[tab][index] == undefined) {
+            data[tab][index] = value;
+            fs.writeFileSync(file, JSON.stringify(data));
+        } else {
+            console.log(tab + "{" + index + "} , Already exists !");
+        }
+    }
 }
 
-const Delete = (index, file) => {
+const Update = (tab, index, newValue, file) => {
     let out = fs.readFileSync(file);
     let data = JSON.parse(out.toString());
-    if (data[index] == undefined) {
-        console.log(index + ", does not exist !");
+    if (tab == "") {
+        if (data[index] == undefined) {
+            console.log(index + ", does not exist !");
+        } else {
+            data[index]=newValue;
+            fs.writeFileSync(file, JSON.stringify(data)); 
+        }
     } else {
-        data[index]=undefined;
-        fs.writeFileSync(file, JSON.stringify(data));
+        if (data[tab][index] == undefined) {
+            console.log(tab + "{" + index + "} , does not exist !");
+        } else {
+            data[tab][index] = value;
+            fs.writeFileSync(file, JSON.stringify(data));
+        }
     } 
 }
 
-const Update = (index, newValue, file) => {
+const Delete = (tab, index, file) => {
     let out = fs.readFileSync(file);
     let data = JSON.parse(out.toString());
-    if (data[index] == undefined) {
-        console.log(index + ", does not exist !");
+    if (tab == "") {
+        if (data[index] == undefined) {
+                console.log(index + ", does not exist !");
+            } else {
+                data[index] = undefined;
+                fs.writeFileSync(file, JSON.stringify(data));
+            }
+    } else if (index == "") {
+        if (data[tab] == undefined) {
+            console.log(tab + ", does not exist !");
+        } else {
+            data[tab] = undefined;
+            fs.writeFileSync(file, JSON.stringify(data));
+        }
     } else {
-        data[index]=newValue;
-        fs.writeFileSync(file, JSON.stringify(data)); 
-    } 
+        if (data[tab][index] == undefined) {
+            console.log(tab + "{" + index + "} , does not exist !");
+        } else {
+            data[tab][index] = undefined;
+            fs.writeFileSync(file, JSON.stringify(data));
+        }
+    }
 }
 
-const Search = (index, file) => {
+/*
+const DeleteTotal = file => {
     let out = fs.readFileSync(file);
     let data = JSON.parse(out.toString());
-    if (data[index] == undefined) {
-        console.log(index + ", does not exist !");
+    for (let i = 0; i<data.lenght ; i++) {
+        data[i] = undefined;
+        fs.writeFileSync(file, JSON.stringify(data));
+    }
+    console.log("File content Delete !")
+}
+*/
+
+const Search = (tab, index,  file) => {
+    let out = fs.readFileSync(file);
+    let data = JSON.parse(out.toString());
+    if (tab == "") {
+        if (data[index] == undefined) {
+                console.log(index + ", does not exist !");
+            } else {
+                return data[index];
+            }
     } else {
-        return data[index];
+        if (data[tab][index] == undefined) {
+            console.log(tab + "{" + index + "} , does not exist !");
+        } else {
+            return data[tab][index];
+        }
     }
 }
 
 module.exports = {
     Create,
     Insert,
-    Delete,
     Update,
+    Delete,
+    //DeleteTotal,
     Search,
 }
