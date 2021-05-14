@@ -47,14 +47,14 @@ const Update = (tab, index, newValue, file) => {
         if (data[index] == undefined) {
             console.log(index + ", does not exist !");
         } else {
-            data[index]=newValue;
+            data[index] = newValue;
             fs.writeFileSync(file, JSON.stringify(data)); 
         }
     } else {
         if (data[tab][index] == undefined) {
             console.log(tab + "{" + index + "} , does not exist !");
         } else {
-            data[tab][index] = value;
+            data[tab][index] = newValue;
             fs.writeFileSync(file, JSON.stringify(data));
         }
     } 
