@@ -1,0 +1,16 @@
+{
+  "name": "discordbreed",
+  "version": "1.0.0",
+  "description": "PTUT",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hawkz#0458",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "fs": "0.0.1-security",
+    "superagent": "^6.1.0"
+  }
+}
