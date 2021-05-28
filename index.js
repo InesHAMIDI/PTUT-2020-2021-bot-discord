@@ -5,128 +5,35 @@ const token = require("./token.json");
 const fs = require("fs");
 const bobot = require("./bobot.json");
 let request = require ('request');
-//imagesbobot = require ("./images.json");
-quiz = require("./test.json")
+const quiz = require("./test.json")
 
-//const item = quiz[Math.floor(Math.random() * quiz.length)];
-/*
-const filter = response => {
-	return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
-};
-*/
 
 bot.on("ready", async () =>{
     console.log('Le bot est allumé');
     bot.user.setStatus("dnd");
     bot.user.setActivity('rien parce qu on travaille hein');
 })
-/*
-function EnregistrerImage() {
-    fs.writeFile("./images.json", JSON.stringify(imagesbobot, null, 4), (err) => {
-        if (err) message.channel.send("Il y a eu une erreur");
-    });
-    
-}
-*/
-
-//tester si le bot fonctionne
-bot.on('message', msg => {
-    if(msg.content == 'ping') {
-        msg.reply('pong !');
-    }
-});
-
 
 
 bot.on('message', message => {
     if(message.content == '!question') {
-        if (message.member.user.bot) return;
-        Chiffre = Math.floor(Math.random() * 2);
-        
-        message.channel.send(`${quiz[Chiffre].question}`);
-        
-        const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id);
-        collector.on('collect', collect => {
-            if(collect.content == `${quiz[Chiffre].answers}`) {
-                message.reply('Bravo !');
-            }
-            else {
-                message.reply('Mauvaise réponse...');
-            }
-        }) 
+
+        const item = quiz[Math.floor(Math.random() * quiz.length)];
+        const filter = response => {
+	        return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+        };
+
+        message.channel.send(item.question).then(() => {
+	        message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
+		        .then(collected => {
+			        message.channel.send(`${collected.first().author} Bravo !`);
+		        })
+		        .catch(collected => {
+			        message.channel.send('Mauvais réponse...');
+		        });
+        });
     }
 });
 
 
-/*
-message.channel.send(item.question).then(() => {
-	message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
-		.then(collected => {
-			message.channel.send(`${collected.first().author} Bonne réponse !`);
-		})
-		.catch(collected => {
-			message.channel.send('Looks like nobody got the answer this time.');
-		});
-});
-
-*/
-
-
-
-/*
-bot.on ('message', async message =>{
-    if (message.channel.id == bobot['channel-images']){
-        if (message.member.user.bot) return;
-        if (message.attachments){
-            message.attachments.forEach(a => {
-                download(a.url, message);
-            });
-        }
-    }
-})
-
-//on créé une fonction pour enregistrer les images 
-function download(url, message) {
-    var Compteur = 1; //on initialise un compteur
-    fs.readdirSync("./images").forEach(file => {
-        Compteur++;
-        //pour chaque image, on rajoute 1 au compteur
-    })
-    var ext = request.get(url).path.split(".").pop()
-    request.get(url)
-        .on('error', console.error) //on répare les erreurs
-        .pipe(fs.createWriteStream(`./images/${Compteur}.${ext}`)); //on enregistre le fichier dans le dossier images
-    imagesbobot.push(`${Compteur}.${ext}`)
-    EnregistrerImage();
-    message.channel.send("L'image a bien été ajoutée !");
-    //message.channel.send("L'image a bien été ajoutée !").then(message => delete({timeout: 10000}).catch(err => console.log(err)));
-}
-
-
-bot.on("message", async message => {
-    if(message.content == "!image") {
-        if(message.member.user.bot) return;
-        var Compteur = 0;
-        imagesbobot.forEach(file => {
-            Compteur ++;
-        })
-        Random = Math.floor(Math.random() * Compteur);
-        message.channel.send({ files: [`./images/${imagesbobot[Random]}`]});
-    }
-})
-*/
-/*
-function image() {
-    if (message.content == "!image") {
-        if (message.member.user.bot) return;
-        var Compteur = 0;
-        imagesbobot.forEach(file => {
-            Compteur ++;
-        })
-        Chiffre = Math.floor(Math.random() * Compteur);
-        message.channel.send({ files: [`./images/${imagesbobot[Chiffre]}`]});
-        reponse(Chiffre);
-    }
-}
-*/
 bot.login(token.token);
