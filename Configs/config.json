@@ -1,4 +1,3 @@
 {
-    "prefix": "*",
-    "bot": "new Discord.Client()"
+    "prefix": "/"
 }

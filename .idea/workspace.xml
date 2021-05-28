@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bff7f37-3621-4c82-8507-8c654229da36" name="Default Changelist" comment="I love SQL (no)&#10;I'm currently still working on turning json BD into sqlite">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PTUT-2019-2020.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PTUT-2019-2020.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="7bff7f37-3621-4c82-8507-8c654229da36" name="Default Changelist" comment="Working on sqlite3 to define the BD n use them">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonctions/RPG.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fonctions/RPG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inventory.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/Fonctions/RPGBDs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Players.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPGItems.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPGLootables.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fonctions/RPGBDs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fonctions/RPGBDs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,19 +35,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +50,8 @@
       <workItem from="1619530610827" duration="95000" />
       <workItem from="1619623030125" duration="3304000" />
       <workItem from="1620312107954" duration="486000" />
-      <workItem from="1620479647336" duration="1462000" />
+      <workItem from="1620479647336" duration="1503000" />
+      <workItem from="1620991425136" duration="180000" />
     </task>
     <task id="LOCAL-00001" summary="I love SQL (no)&#10;I'm currently still working on turning json BD into sqlite">
       <created>1619624673505</created>
@@ -81,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619624673506</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Working on sqlite3 to define the BD n use them">
+      <created>1620481155993</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620481155993</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,7 +87,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="I love SQL (no)&#10;I'm currently still working on turning json BD into sqlite" />
-    <option name="LAST_COMMIT_MESSAGE" value="I love SQL (no)&#10;I'm currently still working on turning json BD into sqlite" />
+    <MESSAGE value="Working on sqlite3 to define the BD n use them" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on sqlite3 to define the BD n use them" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
