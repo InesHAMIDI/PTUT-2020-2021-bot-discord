@@ -24,8 +24,8 @@ module.exports =
 
 			module.exports.messageCooldown = messageCooldown;
 			module.exports.commandCooldown = commandCooldown;
-
-			console.log(`Connecté en tant que ${client.user.tag}.`);
 		})
+
+		console.log(`Connecté en tant que ${client.user.tag}.`);
 	}
 };
