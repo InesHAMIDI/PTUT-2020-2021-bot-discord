@@ -18,18 +18,18 @@ bot.on("ready", async () =>{
 bot.on('message', message => {
     if(message.content == '!question') {
 
-        const item = quiz[Math.floor(Math.random() * quiz.length)];
+        const nombre = quiz[Math.floor(Math.random() * quiz.length)];
         const filter = response => {
-	        return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+	        return nombre.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
         };
 
-        message.channel.send(item.question).then(() => {
+        message.channel.send(nombre.question).then(() => {
 	        message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
 		        .then(collected => {
 			        message.channel.send(`${collected.first().author} Bravo !`);
 		        })
 		        .catch(collected => {
-			        message.channel.send('Mauvais réponse...');
+			        message.channel.send("Personne n'a trouvé... On retente ?");
 		        });
         });
     }
