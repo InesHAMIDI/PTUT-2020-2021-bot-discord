@@ -10,5 +10,5 @@ Pour Plante piranha,
 - les commandes du dossier Misc sont des commandes qui sont là pour des test.
 - les commandes du dossier Mini-jeu permettent de faire des mini-jeu (solo) sur un salon chat de discord :
   - shifumi est un mini-jeu qui reprend le célèbre de pierre-feuille-ciseaux avec un utilisateur contre le bot.
-  - 
+  - jeu de nim est une représentation du jeu des batonnet de FortBoyard avec un utilisateur contre le bot.
 
