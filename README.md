@@ -23,7 +23,7 @@
 ### Commandes
 
 **Nom :** !memberInfo <br />
-**Description :** affiche les informations du membre mentionné, si personne n'est mentionné, les informations du membre émetteur de la commande sont affichées. <br />
+**Description :** affiche les informations du membre mentionné. <br />
 **Paramètres :** [member] -> mention du membre à afficher <br />
 
 **Nom :** !serverInfo <br />
@@ -39,15 +39,15 @@
 **Paramètres :** [member] -> mention du membre à bannir <br />
 
 **Nom :** !delmes <br />
-**Description :** supprime une quantité choisie de messages en partant des plus récents. <br />
+**Description :** supprime une quantité choisie de messages. <br />
 **Paramètres :** [amount] -> quantité de messages à supprimer <br />
 
 **Nom :** !setMessageCooldown <br />
-**Description :** définit le temps d'attente entre chaque envoi de message (propre à chaque membre). <br />
+**Description :** définit le temps d'attente entre chaque envoi de message. <br />
 **Paramètres :** [cooldown] -> temps d'attente en millisecondes <br />
 
 **Nom :** !setCommandCooldown <br />
-**Description :** définit le temps d'attente entre chaque envoi de commande (propre à chaque membre). <br />
+**Description :** définit le temps d'attente entre chaque envoi de commande. <br />
 **Paramètres :** [cooldown] -> temps d'attente en millisecondes <br />
 
 **Nom :** !setBannedWords <br />
