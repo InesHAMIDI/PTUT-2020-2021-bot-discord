@@ -53,3 +53,7 @@
 **Nom :** !setBannedWords <br />
 **Description :** ajoute les mots choisis au filtre de mots. <br />
 **Paramètres :** [mots] -> mots à ajouter au filtre <br />
+
+**Nom :** !commands <br />
+**Description :** affiche la liste des commandes. <br />
+**Paramètres :** aucun <br />
