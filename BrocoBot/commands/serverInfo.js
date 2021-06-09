@@ -1,6 +1,6 @@
 module.exports =
 {
-	name: 'server-info',
+	name: 'serverinfo',
 	despcription: 'Affichage des informations sur le serveur',
 
 	execute(message)

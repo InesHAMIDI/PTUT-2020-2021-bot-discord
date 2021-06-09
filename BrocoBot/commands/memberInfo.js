@@ -1,6 +1,6 @@
 module.exports =
 {
-	name: 'member-info',
+	name: 'memberinfo',
 	description: 'Affichage des informations du membre mentionné',
 
 	execute(message)

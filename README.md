@@ -16,16 +16,17 @@
 - Système anti-spam **paramétrable**
 - Affichage des informations relatives aux membres et au serveur
 - Suppressions **facilitée** des messages
+- Filtrage de mots
 
 ---
 
 ### Commandes
 
-**Nom :** !member-info <br />
+**Nom :** !memberInfo <br />
 **Description :** affiche les informations du membre mentionné, si personne n'est mentionné, les informations du membre émetteur de la commande sont affichées. <br />
 **Paramètres :** [member] -> mention du membre à afficher <br />
 
-**Nom :** !server-info <br />
+**Nom :** !serverInfo <br />
 **Description :** affiche les informations sur le serveur. <br />
 **Paramètres :** aucun <br />
 
@@ -48,3 +49,7 @@
 **Nom :** !setCommandCooldown <br />
 **Description :** définit le temps d'attente entre chaque envoi de commande (propre à chaque membre). <br />
 **Paramètres :** [cooldown] -> temps d'attente en millisecondes <br />
+
+**Nom :** !setBannedWords <br />
+**Description :** ajoute les mots choisis au filtre de mots. <br />
+**Paramètres :** [mots] -> mots à ajouter au filtre <br />

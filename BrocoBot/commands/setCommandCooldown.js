@@ -1,6 +1,6 @@
 module.exports =
 {
-	name: 'set-command-cooldown',
+	name: 'setcommandcooldown',
 	description: 'Modification du temps d\'attente entre chaque commande',
 
 	execute(message, args)
@@ -16,7 +16,7 @@ module.exports =
 		let words = 'MessageCooldown' + ' = ' + ready.messageCooldown.toString() + '\n' +
 					'CommandCooldown' + ' = ' + newCommandCooldown.toString();
 
-		fs.writeFile('settings/settings.ini', words , (err, content) =>
+		fs.writeFile('settings/settings.ini', words, (err, content) =>
 		{
 			if (err)
 			{
