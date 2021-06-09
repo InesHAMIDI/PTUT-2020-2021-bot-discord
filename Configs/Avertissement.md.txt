@@ -1,0 +1,3 @@
+Pour des raisons de sécurité, discord vérifie si le token du bot est mis en ligne sur internet.
+Un repo github ouvert à tous étant un danger pour le token, celui-ci est automatiquement réintialisé. C'est pourquoi seule l'équipe a accès au véritable token du bot.
+Merci pour votre compréhension
