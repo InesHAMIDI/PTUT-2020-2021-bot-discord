@@ -3,8 +3,10 @@ module.exports =
 	name: 'member-info',
 	description: 'Affichage des informations du membre mentionné',
 
-	execute(message, args, discord)
+	execute(message)
 	{
+		const discord = require('discord.js');
+
 		const user = message.mentions.users.first() || message.author;
 
 		let month = "";

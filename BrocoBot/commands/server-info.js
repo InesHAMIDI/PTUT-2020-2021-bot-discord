@@ -3,8 +3,10 @@ module.exports =
 	name: 'server-info',
 	despcription: 'Affichage des informations sur le serveur',
 
-	execute(message, args, discord)
+	execute(message)
 	{
+		const discord = require('discord.js');
+		
 		let month = "";
 		switch(message.guild.createdAt.getMonth())
 		{

@@ -1,53 +1,51 @@
+/* Module message
+
+   Gère l'envoi de messages et de commandes
+   Applique le cooldown et le filtre de mots
+   Lance les commandes reçues
+*/
+
 module.exports =
 {
 	name: 'message',
 
-	execute(message, client, prefix, discord)
+	execute(message, client)
 	{
-		if(message.author.bot)
+		if(message.author.bot)	//Retour si l'émetteur est un bot
 			return;
 
+		const config = require('../config.json');
+		const ready = require('./ready.js');
 		const now = Date.now();
 
-		if(!message.content.startsWith(prefix))
+		//Application du filtre à mots
+
+		for(let i = 0; i < ready.bannedWords.length; ++i)
 		{
-			let ready = require(`${__dirname}/ready.js`);
-			let messageCooldown = parseInt(ready.messageCooldown);
-			let commandCooldown = parseInt(ready.commandCooldown);
-
-			const messageCooldownExpiration = message.author.lastMessageTime + messageCooldown;
-
-			if (now > messageCooldownExpiration || Number.isNaN(messageCooldownExpiration))
-			{
-				message.author.lastMessageTime = now;
-			}
-			else
+			if(message.content.includes(ready.bannedWords[i]))
 			{
 				message.delete();
-				const timeLeft = (messageCooldownExpiration - now) / 1000;
-				return message.reply(`Veuillez attendre ${timeLeft.toFixed(1)} seconde(s) avant de renvoyer un message.`);
+				return;
 			}
-
-			return;
 		}
-		else
+		
+		if(message.content.startsWith(config.prefix))	//Commande
 		{
-			const args = message.content.slice(prefix.length).trim().split(/ +/);
+			const args = message.content.slice(config.prefix.length).trim().split(/ +/);
 			const commandName = args.shift().toLowerCase();
 
 			if (!client.commands.has(commandName))
 				return;
 
-			const command = client.commands.get(commandName);
-			
-			const commandCooldown = 3000;
-			const commandCooldownExpiration = message.author.lastCommandTime + commandCooldown;
+			//Application du cooldown
 
+			const commandCooldownExpiration = parseInt(message.author.lastCommandTime) + parseInt(ready.commandCooldown);
+			
 			if (now > commandCooldownExpiration || Number.isNaN(commandCooldownExpiration))
 			{
 				try
 				{
-					command.execute(message, args, discord);
+					client.commands.get(commandName).execute(message, args);
 				}
 				catch (error)
 				{
@@ -62,6 +60,23 @@ module.exports =
 				message.delete();
 				const timeLeft = (commandCooldownExpiration - now) / 1000;
 				return message.reply(`Veuillez attendre ${timeLeft.toFixed(1)} seconde(s) avant de réutiliser cette commande.`);
+			}
+		}
+		else	//Message
+		{
+			//Application du cooldown
+			
+			const messageCooldownExpiration = parseInt(message.author.lastMessageTime) + parseInt(ready.messageCooldown);
+
+			if (now > messageCooldownExpiration || Number.isNaN(messageCooldownExpiration))
+			{
+				message.author.lastMessageTime = now;
+			}
+			else
+			{
+				message.delete();
+				const timeLeft = (messageCooldownExpiration - now) / 1000;
+				return message.reply(`Veuillez attendre ${timeLeft.toFixed(1)} seconde(s) avant de renvoyer un message.`);
 			}
 		}
 	}
