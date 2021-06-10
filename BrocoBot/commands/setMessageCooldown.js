@@ -16,7 +16,7 @@ module.exports =
 		let words = 'MessageCooldown' + ' = ' + newMessageCooldown.toString() + '\n' +
 					'CommandCooldown' + ' = ' + ready.commandCooldown.toString();
 
-		fs.writeFile('settings/settings.ini', words, (err, content) =>
+		fs.writeFile('settings/cooldowns.ini', words, (err, content) =>
 		{
 			if (err)
 			{
