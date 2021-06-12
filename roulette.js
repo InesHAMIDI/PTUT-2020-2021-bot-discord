@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args, settings) => {
     let action = args[0];
     
     if (action == undefined) {
-        return message.reply(` vous avez mal rentré les arguments: \` <gain miser> <action> \``);
+        return message.reply(` vous avez mal rentré les arguments: \` <action> \``);
     }
     if (action > 36 || action < 0){
         return message.reply("action => noir/pair ou rouge/impair ou 0 à 36")
