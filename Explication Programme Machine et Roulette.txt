@@ -1,0 +1,11 @@
+Explication Programme Machine et Roulette par Taliesin Aubert
+
+Machine :
+ce programme crée une liste avec des symbole : ♠️ ♣️ ♥️ ♦️ 💰.
+Par une boucle for, elle tire trois fois les symbole dans un tableau ci-dessus puis les affiche dans un embed.
+Enfin il regarde les 3 symbole du tableau pour voir si ils sont identiques, si oui : il donnera "des points", sinon il fera rien.
+
+Roulette :
+ce programme récupe en argument : l'action que l'utilisateur définie(nombre entre 0 à 36, noir/rouge, pair/impair).
+Puis il fait un programme aléatoire entre 0 à 36 et l'affectera à un cube de couleur (vert pour 0, rouge pour les nombre pair et noir pour les nombre impair)
+et enfin compare le résultat qu'il a obtenue avec l'action que l'utilisateur à definie

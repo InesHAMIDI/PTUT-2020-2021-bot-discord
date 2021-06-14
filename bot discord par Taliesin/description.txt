@@ -1,0 +1,14 @@
+Mon travail a été réalisé par des tuto youtube !
+
+Pour goomba or,
+- les commandes du dossier Casino sont des représentation des jeu du casino et de leur fonctionnement.
+- les commandes du dossier Role permet de créer un role sur un serveur discord et, pour le role goldcoinneur, créer un utilisateur dans une base de donnée gérée par mongoose.
+- les commandes du dossier Goldcoin modifie la base de donnée gérée par mongoose.
+- les commandes du dossier Misc sont des commandes qui sont là pour des test.
+
+Pour Plante piranha,
+- les commandes du dossier Misc sont des commandes qui sont là pour des test.
+- les commandes du dossier Mini-jeu permettent de faire des mini-jeu (solo) sur un salon chat de discord :
+  - shifumi est un mini-jeu qui reprend le célèbre de pierre-feuille-ciseaux avec un utilisateur contre le bot.
+  - jeu de nim est une représentation du jeu des batonnet de FortBoyard avec un utilisateur contre le bot.
+

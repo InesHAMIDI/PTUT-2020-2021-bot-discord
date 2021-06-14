@@ -1,0 +1,39 @@
+									module : Simpdatabase
+
+Pour commencer :
+Note: après avoir mis le dossier "simpdatabase" dans le dossier "node_modules",
+
+metter "const db = require("simpdadabase");" pour comencer à travailler avec le module "simpdatabase".
+
+Commande :
+
+db.Create("<file_name>"); => créer un fichier.json avec comme nom : <file_name>. celui-ci apparaitra sur votre dossier racine et il pourra être déplacer manuellement.
+			    En ouvrant le fichier, il y aura déjà des crochet "{}" afficher.
+
+
+db.Insert("<Index>" , <value>,"<file_name>"); => Va inserérer dans votre fichier <file_name> un <index> suivie de son <value> comme : "<index>": <value>.
+						ps: cette commande marchera si : - le fichier.json comporte des crochet "{}"  
+										 - <index> n'existe pas
+										 - qu'il y a une donnée à la fois
+
+
+db.Delete("<Index>" , "<file_name>"); => Va supprimer de votre fichier <file_name> l'<index> selectionner.
+						ps: cette commande marchera si : - le fichier.json comporte des crochet "{}"
+										 - <index> existe
+										
+
+db.Update("<Index>" , <value>,"<file_name>"); => Va mettre à jour dans votre fichier <file_name> le <value> de l'<index> selectionner.
+						ps: cette commande marchera si : - le fichier.json comporte des crochet "{}"  
+										 - <index> existe
+										 - qu'il y a une donnée à la fois
+						
+						
+db.Search("<Index>" , "<file_name>"); => Va rechercher et renvoyer dans votre fichier <file_name> le <value> de l'<index> selectionner.
+						ps: cette commande marchera si : - le fichier.json comporte des crochet "{}"  
+										 - <index> existe
+										 - qu'il y a une donnée à la fois
+
+utilisation de la commande Search (mon <index> comporte un <value> qui est un nombre.) : var data = db.Search("<Index>" , "<file_name>");
+
+
+ps : <value> peut comporter des Nombre ou des String (attention à la variable utiliser pour la commande : Search).
