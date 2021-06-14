@@ -13,6 +13,8 @@ module.exports =
 		.setThumbnail(message.guild.iconURL())
 		.setDescription('Entrez l\'une des commandes suivantes')
 		.addField('!adminCommands', 'affiche les commandes d\'administration')
+		.addField('!gameCommands', 'affiche les commandes de jeux')
+		.addField('!petCommands', 'affiche les commandes d\'animaux de compagnie')
 		.addField('!commands', 'affiche la liste des commandes')
 		.setFooter('Les majuscules ne sont pas prises en compte')
 	
