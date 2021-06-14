@@ -57,3 +57,15 @@
 **Nom :** !commands <br />
 **Description :** affiche la liste des commandes. <br />
 **Paramètres :** aucun <br />
+
+**Nom :** !adminCommands <br />
+**Description :** affiche la liste des commandes liées à l'administration. <br />
+**Paramètres :** aucun <br />
+
+**Nom :** !gameCommands <br />
+**Description :** affiche la liste des commandes liées aux jeux. <br />
+**Paramètres :** aucun <br />
+
+**Nom :** !petCommands <br />
+**Description :** affiche la liste des commandes liées aux animaux de compagnie. <br />
+**Paramètres :** aucun <br />
