@@ -23,11 +23,11 @@ PTUT-2020-2021 Yvan
 
 ### Commandes
 
-**Nom :** !memberInfo <br />
+**Nom :** !memberinfo <br />
 **Description :** affiche les informations du membre mentionné. <br />
 **Paramètres :** [member] -> mention du membre à afficher <br />
 
-**Nom :** !serverInfo <br />
+**Nom :** !serverinfo <br />
 **Description :** affiche les informations sur le serveur. <br />
 **Paramètres :** aucun <br />
 
@@ -43,15 +43,15 @@ PTUT-2020-2021 Yvan
 **Description :** supprime une quantité choisie de messages. <br />
 **Paramètres :** [amount] -> quantité de messages à supprimer <br />
 
-**Nom :** !setMessageCooldown <br />
+**Nom :** !setmessagecooldown <br />
 **Description :** définit le temps d'attente entre chaque envoi de message. <br />
 **Paramètres :** [cooldown] -> temps d'attente en millisecondes <br />
 
-**Nom :** !setCommandCooldown <br />
+**Nom :** !setcommandcooldown <br />
 **Description :** définit le temps d'attente entre chaque envoi de commande. <br />
 **Paramètres :** [cooldown] -> temps d'attente en millisecondes <br />
 
-**Nom :** !setBannedWords <br />
+**Nom :** !setbannedwords <br />
 **Description :** ajoute les mots choisis au filtre de mots. <br />
 **Paramètres :** [mots] -> mots à ajouter au filtre <br />
 
@@ -59,14 +59,14 @@ PTUT-2020-2021 Yvan
 **Description :** affiche la liste des commandes. <br />
 **Paramètres :** aucun <br />
 
-**Nom :** !adminCommands <br />
+**Nom :** !admincommands <br />
 **Description :** affiche la liste des commandes liées à l'administration. <br />
 **Paramètres :** aucun <br />
 
-**Nom :** !gameCommands <br />
+**Nom :** !gamecommands <br />
 **Description :** affiche la liste des commandes liées aux jeux. <br />
 **Paramètres :** aucun <br />
 
-**Nom :** !petCommands <br />
+**Nom :** !petcommands <br />
 **Description :** affiche la liste des commandes liées aux animaux de compagnie. <br />
 **Paramètres :** aucun <br />
