@@ -1,6 +1,6 @@
 module.exports =
 {
-	name: 'petCommands',
+	name: 'petcommands',
 	description: 'Affichage des commandes liées aux animaux de compagnie',
 
 	execute(message)

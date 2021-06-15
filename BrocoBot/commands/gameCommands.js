@@ -1,6 +1,6 @@
 module.exports =
 {
-	name: 'gameCommands',
+	name: 'gamecommands',
 	description: 'Affichage des commandes liées aux jeux',
 
 	execute(message)
