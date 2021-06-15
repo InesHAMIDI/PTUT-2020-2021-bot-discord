@@ -1,0 +1,10 @@
+[
+	{
+		"question": "Capitale de la France ?",
+		"answers": ["Paris"]
+	},
+	{
+		"question": "Une des couleurs du drapeau italien ?",
+		"answers": ["vert", "blanc", "rouge"]
+	}
+]

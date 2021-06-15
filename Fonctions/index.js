@@ -4,20 +4,19 @@ const token = require('../Configs/token.json'); //le token est stocké à part p
 const prefix = require('../Configs/config.json'); //on stocke le préfix des commandes dans une variable pour rendre les fonctions plus pratiques à implémenter
 const fs = require('fs'); //requis pour lire les fichiers de commande
 
-
 //Yvan
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+client.commands = new Discord.Collection(); //Ajout des commandes au client
 
-client.commands = new Discord.Collection();	 //Ajout des commandes au client
-
-for (const file of commandFiles)  //Lecture des commandes
+//commandes d'Yvan
+for (const file of commandFiles) //Lecture des commandes
 {
     const command = require(`./commands/${file}`);
     client.commands.set(command.name, command);
 }
 
-for (const file of eventFiles)  //Lecture des évènements
+for (const file of eventFiles) //Lecture des évènements
 {
     const event = require(`./events/${file}`);
 
@@ -47,5 +46,7 @@ client.on('message', msg => {
         msg.reply('Pong!');
     }
 }); //une fonction simple pour vérifier si le bot fonctionne, vient de l'api discord
+
+
 
 client.login(token.token); //lance le bot
