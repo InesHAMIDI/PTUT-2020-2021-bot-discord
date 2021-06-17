@@ -245,11 +245,6 @@ bot.on('message', function(message) {
     }
 });
 
-
-
-
-
-
 //Fonctions de bases du bot (Ines)
 client.on("ready", async() => {
     console.log("bot allume"); //un message dans la console pour être sûr que tout marche
