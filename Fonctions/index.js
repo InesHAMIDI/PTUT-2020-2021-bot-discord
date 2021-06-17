@@ -1,8 +1,12 @@
 const Discord = require('discord.js'); //typique #include<>
-const client = new Discord.Client(); //prérequis pour  créer le bot
+const { client, bot } = new Discord.Client(); //prérequis pour  créer le bot
 const token = require('../Configs/token.json'); //le token est stocké à part pour simplifier
 const prefix = require('../Configs/config.json'); //on stocke le préfix des commandes dans une variable pour rendre les fonctions plus pratiques à implémenter
-const fs = require('fs'); //requis pour lire les fichiers de commande
+const { fs, fstat } = require('fs'); //requis pour lire les fichiers de commande
+const bobot = require("./bobot.json");
+let request = require('request');
+const quiz = require("./images.json")
+
 
 //Yvan
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
@@ -25,6 +29,39 @@ for (const file of eventFiles) //Lecture des évènements
     else
         client.on(event.name, (...args) => event.execute(...args, client));
 }
+
+//commandes d'Angèle
+//fonction qui envoie une image aléatoire et analyse la réponse
+bot.on('message', message => {
+    //commande pour déclencher la fonction
+    if (message.content == '!image') {
+
+        //générer un nombre aléatoire
+        const nombre = quiz[Math.floor(Math.random() * quiz.length)];
+        //on filtre la réponse pour savoir si elle correspond à celles de la liste 
+        const filter = response => {
+            return nombre.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+        };
+
+        //le bot envoie l'image
+        const image = { files: [`./images/${nombre.picture}`] };
+        const indice = (`${nombre.indice}`);
+        //message.channel.send(indice);
+        message.channel.send(image).then(() => {
+            //le bot attends les réponses des utilisateurs
+            message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
+                .then(collected => {
+                    //si la réponse est bonne 
+                    message.channel.send(`${collected.first().author} Bravo ! C'était bien *${nombre.solution}*.`);
+                })
+                .catch(collected => {
+                    //si le temps est dépassé
+                    message.channel.send(`Personne n'a trouvé... C'était *${nombre.solution}*. On retente ?`);
+                });
+        });
+    }
+});
+
 
 
 client.on("ready", async() => {
