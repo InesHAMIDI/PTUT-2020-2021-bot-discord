@@ -1,5 +1,5 @@
 const { Client, Collection, Discord } = require('discord.js'); //typique #include<>
-const { client, bot } = new Discord.Client(); //prérequis pour  créer le bot
+const { client, bot } = new Client(); //prérequis pour  créer le bot
 const token = require('../Configs/token.json'); //le token est stocké à part pour simplifier
 const prefix = require('../Configs/config.json'); //on stocke le préfix des commandes dans une variable pour rendre les fonctions plus pratiques à implémenter
 const { fs, fstat } = require('fs'); //requis pour lire les fichiers de commande

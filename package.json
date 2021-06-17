@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/InesHAMIDI/PTUT-2020-2021-bot-discord/issues"
   },
-  "homepage": "https://github.com/InesHAMIDI/PTUT-2020-2021-bot-discord#readme"
+  "homepage": "https://github.com/InesHAMIDI/PTUT-2020-2021-bot-discord#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
 }
