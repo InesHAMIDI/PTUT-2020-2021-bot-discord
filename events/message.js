@@ -1,83 +1,52 @@
-/* Module message
+const { Collection } = require("discord.js");
+const prefix = "$";
 
-   Gère l'envoi de messages et de commandes
-   Applique le cooldown et le filtre de mots
-   Lance les commandes reçues
-*/
+module.exports = (client, message) => {
+    if(!message.content.startsWith(prefix)  || message.author.bot) return;
 
-module.exports =
-{
-	name: 'message',
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const commandName = args.shift().toLowerCase();
+    const user = message.mentions.users.first();
 
-	execute(message, client)
-	{
-		if(message.author.bot)	//Retour si l'émetteur est un bot
-			return;
+    // vérification Aliases
+    const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName));
+    if (!command) return;
+    
+    if (command.help.permissions && !message.member.hasPermission('ADMINISTRATOR')) {
+        return message.channel.send(new Discord.MessageEmbed()
+            .setTitle(`${message.author}, la commande est réservée aux admins`)
+            .setColor('#ff0000'))
+        console.log("erreur utilisateur non-admin")
+    }
+    
+    if (command.help.args && !args.length) {
+        let noArgsReply = `Il nous faut des arguments pour cette commande, ${message.author}!`
+        
+        if (command.help.usage) noArgsReply += `\nVoici comment utiliser la commande: \`${prefix}${command.help.name} ${command.help.usage}\``
+        
+        return message.channel.send(noArgsReply)
+    }
 
-		const config = require('../config.json');
-		const ready = require('./ready.js');
-		const now = Date.now();
+    // vérification cooldowns
+    if (!client.cooldowns.has(command.help.name)) {
+        client.cooldowns.set(command.help.name, new Collection());
+    }
 
-		//Application du filtre à mots
+    const timeNow = Date.now();
+    const tStamps = client.cooldowns.get(command.help.name);
+    const cdAmount = (command.help.cooldown || 5) * 1000;
 
-		for(let i = 0; i < ready.bannedWords.length; ++i)
-		{
-			if(message.content.includes(ready.bannedWords[i]))
-			{
-				message.delete();
-				return;
-			}
-		}
-		
-		if(message.content.startsWith(config.prefix))	//Commande
-		{
-			const args = message.content.slice(config.prefix.length).trim().split(/ +/);
-			const commandName = args.shift().toLowerCase();
+    if (tStamps.has(message.author.id)) {
+        const cdExprirationTime = tStamps.get(message.author.id) + cdAmount;
 
-			if (!client.commands.has(commandName))
-				return;
+        if (timeNow < cdExprirationTime) {
+            timeLeft = (cdExprirationTime - timeNow) / 1000;
+            return message.reply(`merci d'attendre ${timeLeft.toFixed(0)} seconde(s) avant ré-utiliser la commande \`${command.help.name}\`.`);
+        }
+    }
 
-			//Application du cooldown
+    tStamps.set(message.author.id, timeNow);
+    setTimeout(() => tStamps.delete(message.author.id), cdAmount)
 
-			const commandCooldownExpiration = parseInt(message.author.lastCommandTime) + parseInt(ready.commandCooldown);
-			
-			if (now > commandCooldownExpiration || Number.isNaN(commandCooldownExpiration))
-			{
-				try
-				{
-					client.commands.get(commandName).execute(message, args);
-				}
-				catch (error)
-				{
-					console.error(error);
-					message.reply('Erreur durant l\'exécution de la commande.');
-				}
-
-				message.author.lastCommandTime = now;
-			}
-			else
-			{
-				message.delete();
-				const timeLeft = (commandCooldownExpiration - now) / 1000;
-				return message.reply(`Veuillez attendre ${timeLeft.toFixed(1)} seconde(s) avant de réutiliser cette commande.`);
-			}
-		}
-		else	//Message
-		{
-			//Application du cooldown
-			
-			const messageCooldownExpiration = parseInt(message.author.lastMessageTime) + parseInt(ready.messageCooldown);
-
-			if (now > messageCooldownExpiration || Number.isNaN(messageCooldownExpiration))
-			{
-				message.author.lastMessageTime = now;
-			}
-			else
-			{
-				message.delete();
-				const timeLeft = (messageCooldownExpiration - now) / 1000;
-				return message.reply(`Veuillez attendre ${timeLeft.toFixed(1)} seconde(s) avant de renvoyer un message.`);
-			}
-		}
-	}
-};
+    command.run(client, message, args);
+}

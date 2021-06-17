@@ -1,9 +1,15 @@
 const { MessageEmbed } = require("discord.js");
 const { MESSAGES } = require("../../util/constants");
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (client, message, args, settings) => {
     // ♠️ ♣️ ♥️ ♦️ 💰
     
+    if (settings.goldcoin < 5) {
+        return message.reply(" vous n'avez pas assez de <:piece:819882973545234443> pour jouer, il faut au minimum 5 <:piece:819882973545234443>!")
+    }
+    
+    total = settings.goldcoin - 5;
+    await client.updateGoldcoinneur(message.author.id, { goldcoin: total });
     let Tabresult = [];
     const Tabemoji = ["♠️","♠️","♠️","♠️","♠️","♠️","♠️","♠️","♠️","♠️","♣️","♣️","♣️","♥️","♥️","♥️","♥️","♦️","♦️","💰"];
 
@@ -24,23 +30,34 @@ module.exports.run = async (client, message, args) => {
 
     if (Tabresult[0] === "♠️" && Tabresult[1] === "♠️" && Tabresult[2] === "♠️") {
 
-        message.reply(` vous avez gagné 10 piece !`)
+        Goldcoin = Goldcoin + 10;
+        total = settings.goldcoin - 5;
+        await client.updateGoldcoinneur(message.author.id, { goldcoin: total });
+        message.reply(` vous avez gagné 10 <:piece:819882973545234443>!`)
 
     } else if (Tabresult[0] === "♣️" && Tabresult[1] === "♣️" && Tabresult[2] === "♣️") {
 
-    message.reply(` vous avez gagné 20 piece !`)
+        total = settings.goldcoin + 20;
+        await client.updateGoldcoinneur(message.author.id, { goldcoin: total });
+        message.reply(` vous avez gagné 20 <:piece:819882973545234443>!`)
 
     } else if(Tabresult[0] === "♥️" && Tabresult[1] === "♥️" && Tabresult[2] === "♥️") {
 
-        message.reply(` vous avez gagné 40 piece !`)
+        total = settings.goldcoin + 40;
+        await client.updateGoldcoinneur(message.author.id, { goldcoin: total });
+        message.reply(` vous avez gagné 40 <:piece:819882973545234443>!`)
 
     } else if (Tabresult[0] === "♦️" && Tabresult[1] === "♦️" && Tabresult[2] === "♦️") {
 
-        message.reply(` vous avez gagné 80 piece !`)
+        total = settings.goldcoin + 80;
+        await client.updateGoldcoinneur(message.author.id, { goldcoin: total });
+        message.reply(` vous avez gagné 80 <:piece:819882973545234443>!`)
 
     } else if(Tabresult[0] === "💰" && Tabresult[1] === "💰" && Tabresult[2] === "💰") {
         
-        message.reply(` vous avez gagné 160 piece !`)
+        total = settings.goldcoin + 160;
+        await client.updateGoldcoinneur(message.author.id, { goldcoin: total });
+        message.reply(` vous avez gagné 160 <:piece:819882973545234443>!`)
 
     } else {
         message.reply(" vous avez perdu!")

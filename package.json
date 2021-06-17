@@ -1,0 +1,23 @@
+{
+  "name": "ptut-2019-2020",
+  "version": "1.0.0",
+  "description": "the bot discord project made for ptut",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InesHAMIDI/PTUT-2020-2021-bot-discord.git"
+  },
+  "keywords": [
+    "bot",
+    "javascript"
+  ],
+  "author": "ines HAMIDI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InesHAMIDI/PTUT-2020-2021-bot-discord/issues"
+  },
+  "homepage": "https://github.com/InesHAMIDI/PTUT-2020-2021-bot-discord#readme"
+}
